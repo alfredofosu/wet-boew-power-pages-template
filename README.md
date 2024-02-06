@@ -41,6 +41,7 @@ For the Enhanced Data Model enter this pac command: ([Enhanced data model | Micr
 ```
 pac powerpages upload --path < path > -mv2
 ```
+For more details, visit [Tutorial: Use Microsoft Power Platform CLI with Power Pages](https://learn.microsoft.com/en-us/power-pages/configure/power-platform-cli-tutorial#upload-the-changes-using-deployment-profile)
 
 ## Step 4: Change languages code
 If Enhanced data model, go to Power Pages Management > Websites > Supported Languages
@@ -65,7 +66,7 @@ In the Power Pages Management app, change the 'Website' for the components below
 - WET5/Version
 - WET5/Mode
 
-#### Content Snippets
+#### Content Snippets (For both English and French)
 - WET5/AppName
 - WET5/Breadcrumbs
 - WET5/MenuLinks
