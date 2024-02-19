@@ -1,23 +1,28 @@
 # About Power-Pages-CDTS-WET-Templates
 
-This CDTS-WET template expedites development in Power Pages. It adheres to the implementation guidelines outlined in the Centrally Deployed Templates Solution (CDTS) documentation, utilizing the second method approach described here: [CDTS v5.0.0](https://cenw-wscoe.github.io/sgdc-cdts/docs/internet-nodocwrite-en.html). Notably, it enables users to seamlessly switch between different templates (GCWeb or GCIntranet) through a single site setting (WET5/Mode). Since these templates are dynamically generated, your time in a low-code-no-code environment will be focused on other core Application Life-Cycle Management goals. The use of these templates streamlines development, ensuring accessibility, usability, interoperability, mobile-friendliness, and multilingual support.
+This CDTS-WET template expedites development in Power Pages. It adheres to the implementation guidelines outlined in the Centrally Deployed Templates Solution (CDTS) documentation, utilizing the second method approach described here: [CDTS v5.0.0](https://cenw-wscoe.github.io/sgdc-cdts/docs/internet-nodocwrite-en.html). Notably, it enables developers to seamlessly switch between different templates, GCWeb Common, GCWeb Application, GCIntranet Common and GCIntranet Application through site settings. Since these templates are dynamically generated, your time in a low-code-no-code environment will be focused on other core Application Life-Cycle Management goals. The use of these templates streamlines development, ensuring accessibility, usability, interoperability, mobile-friendliness, and multilingual support.
 
-This template has been tested in the **Standard Data Model (SDM)**. A test in the Enhanced Data Model (EDM) will up later.
+This template has been tested in the **Standard Data Model (SDM)**. A test in the Enhanced Data Model (EDM) will up later. This template has been designed as a plug-and-play template that gets your ready for development in a few minutes.
 
 # How-To:
-## Step 1: Clone this repo
+## Step 1: Install a Blank Template 
+Install a blank power pages template in your environment. This is if you haven't started a new project. 
+
+## Step :Clone this repo
 
 ## Step 2: Install Microsoft Power Platform CLI
 Install via .msi download, run the .msi file found here: [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI), and choose the Install option.
 Detailed instructions can be found here: [Install Power Platform CLI for Windows](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/powerapps-cli).
 
 ## Step 3: Upload Power Pages content
+
 ### 3.1. Open Power Shell
 Search Power Shell in the Window's search bar and open it.
+
 ### 3.2. Auth
 There are several ways to authenticate with your Microsoft CRM 365 environment, either
 
-by using your environment ID ([here is how to locate your ID](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/auth#environment-create))
+by using your environment ID ([here is how to locate your environment's ID](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/auth#environment-create))
 ```
 pac auth create --environment < Your environment ID >
 ```
@@ -43,7 +48,8 @@ pac powerpages upload --path < path > -mv2
 ```
 For more details, visit [Tutorial: Use Microsoft Power Platform CLI with Power Pages](https://learn.microsoft.com/en-us/power-pages/configure/power-platform-cli-tutorial#upload-the-changes-using-deployment-profile)
 
-## Step 4: Change languages code
+## Step 4: Change Language Code for English and French
+By default language codes in Power Pages are stored together with country codes. For example, English: **en-Us** and for French: **fr-Fr**. This ensures the language links are populated
 If Enhanced data model, go to Power Pages Management > Websites > Supported Languages
 
 If Standard data model, go to Portal Management > Portal Languages
