@@ -702,7 +702,7 @@ adx_webtemplate:
   IsDeleted: false
 - RecordId: 5a1b78e5-b67b-f011-b4cc-000d3ae86a1f
   DisplayName: GCWeb/App/Footer
-  CheckSum: dcf38a182fa7df8ad1036768cee617f70d3cae186a112c41ab99d5aa3cb84204
+  CheckSum: 53819915ee15a3711e2154517badfcb3ebef06b1ae702a1bd40a8374b9cbe13d
   IsDeleted: false
 - RecordId: 6709d49c-e3dd-4aab-9c4c-fd6b16f343fa
   DisplayName: Layout 2 Column Wide Left

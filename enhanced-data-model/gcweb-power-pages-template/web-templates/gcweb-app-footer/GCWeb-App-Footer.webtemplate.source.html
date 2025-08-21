@@ -1,7 +1,7 @@
 {%- assign cdtsVersion = settings['GCWeb/App/Version'] | default:"v5_0_4"-%}
 {%- assign cdtsTemplatesUrl = settings['GCWeb/App/BaseURL'] | default:"https://www.canada.ca/etc/designs/canada/cdts/gcweb/" -%}
 
-<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+<footer role="contentinfo" id="wb-info" class="">
     {% assign gcContextual = settings['GCWeb/App/Footer/ContextualEnabled'] | boolean | default:false %}
     {% if gcContextual %}
     <div class="gc-contextual">

@@ -257,3 +257,7 @@ pac pages import --help
 
 ## Troubleshooting Guide
 TBD
+
+# Screenshots:
+
+![Working example in Power Pages](/assets/its-a-power-pages-site.png)
