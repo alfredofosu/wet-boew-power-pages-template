@@ -1,4 +1,3 @@
-...existing code...
 # Web Experience Toolkit (WET) Power Pages Template
 
 ## Overview
