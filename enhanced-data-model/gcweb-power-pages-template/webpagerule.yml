@@ -1,0 +1,9 @@
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 40295f55-1a07-4f34-86d9-0787784c0c49
+  adx_webpageaccesscontrolruleid: a5b3bc87-714f-4335-ad75-3f55eeed7b0a
+  adx_webpageid: 1c52619f-39b2-415b-9f0d-56789f1802bf
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_webpageaccesscontrolruleid: c8e73506-7203-43c2-9b2f-26eef205bbd3

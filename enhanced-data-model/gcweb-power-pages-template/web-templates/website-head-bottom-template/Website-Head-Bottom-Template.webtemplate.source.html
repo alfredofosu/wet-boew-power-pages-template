@@ -1,0 +1,23 @@
+{%- assign cdtsVersion = settings['GCWeb/App/Version'] | default:"v5_0_4"-%}
+{%- assign cdtsTemplatesUrl = settings['GCWeb/App/BaseURL'] | default:"https://www.canada.ca/etc/designs/canada/cdts/gcweb/" -%}
+
+
+<link type="text/css" rel="stylesheet" href="{{- cdtsTemplatesUrl -}}{{- cdtsVersion -}}/cdts/cdts-app-styles.css">
+<link type="image/x-icon" rel="icon" href="{{- cdtsTemplatesUrl -}}{{- cdtsVersion -}}/wet-boew/assets/favicon.ico" >
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    type="text/javascript"
+    onload="window.jQuery_3_7_1 = jQuery.noConflict(true);"
+    onerror="javascript: 
+        var script = document.createElement('script'); 
+        script.crossOrigin = event.target.crossOrigin; 
+        script.src = '/jquery-3.7.1.min.js';
+        script.type = 'text/javascript'; 
+        script.onload = function() { 
+            window.jQuery_3_7_1 = jQuery.noConflict(true); 
+        }; 
+        event.target.parentNode.insertBefore(script, event.target.nextSibling);">
+</script>
+
+<!-- Local Scripts-->
+<script type="text/javascript" src="/gcweb.app.common.js?{{- now | date:'yyyyMMddHHmmss' -}}"></script>

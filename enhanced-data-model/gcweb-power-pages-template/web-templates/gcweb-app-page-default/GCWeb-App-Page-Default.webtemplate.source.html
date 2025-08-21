@@ -1,0 +1,14 @@
+<main id="mainContent" class="grid-container wrapper-body" property="mainContentOfPage" typeof="WebPageElement">
+  {% assign ThrobberEnabled = settings['GCWeb/App/ThrobberEnabled'] | boolean | default:false %}
+  {% if ThrobberEnabled %}
+    {% include 'GCWeb/App/Throbber' %}
+  {% endif %}
+  {%- include 'GCWeb/App/Page/Title' -%}
+  <div class="page-copy container">
+    {% editable page 'adx_copy' type: 'html', liquid: true %}
+  </div>
+  {%- assign PageDetailsEnabled = settings['GCWeb/App/Footer/PageDetailsEnabled'] | boolean | default:false -%}
+  {%- if PageDetailsEnabled -%}
+    {% include 'GCWeb/App/Page/Details' %}
+  {%- endif -%}
+</main>

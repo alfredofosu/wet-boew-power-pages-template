@@ -1,0 +1,134 @@
+:root {
+  --fontFamilyNotoSans: "Noto Sans", sans-serif;
+  --fontFamilyLato: Lato, sans-serif;
+  --fontSizeH1: 38px;
+  --fontSizeH2: 36px;
+  --fontSizeH3: 24px;
+  --fontSizeH4: 22px;
+  --fontSizeH5: 20px;
+  --fontSizeH6: 19px;
+  --fontSizeBody: 20px;
+  --fontSizeLink: 16px;
+  --fontWeightBold: bold;
+  --fontWeightNormal: normal;
+  --formControlBorderRadius: 4px;
+  --formControlBackground: white;
+  --formControlMinHeight: 37px;
+  --formControlSpanBackground: #eaebed;
+  --formControlSectionBackground: #fafafa;
+  --formControlReadOnlyBackground: #fafafa;
+  --mainContentWidth: 60%;
+}
+.page-header {grid-area: title;}
+.page-copy {grid-area: body;}
+.pagedetails {grid-area: details;}    
+
+.grid-container {
+  display: grid !important;
+  grid-template-rows: auto 2fr auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+      "title"
+      "body"
+      "details";
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+/*  Convert all fonts to WET default, besides icons     */
+*:not(.glyphicon, .fa, code, pre), body[data-sitemap-state*="/"] {
+  font-family: var(--fontFamilyNotoSans) !important;
+}
+
+.breadcrumb {
+  a:not(.btn) {
+    color: #284162 !important;
+    font-size: inherit !important;
+    text-decoration: underline !important;
+  }
+
+  .active {
+    font-weight: unset !important;
+    color: #000 !important;
+  }
+}
+
+a:not(.btn, .app-name), .a {
+  font-size: var(--fontSizeLink) !important;
+}
+
+#wb-bnr > div.row {
+  display: block !important;
+}
+
+#content_form > div.page-heading > div > ul.breadcrumb {
+  display: none;
+}
+
+.page-header {
+  border-bottom: 0 !important;
+  h2>span>span::after{
+    content: "" !important;
+    display: block !important;
+    padding-bottom: 8px !important;
+    border-bottom: .18em solid #af3c43 !important;
+    border-image: linear-gradient(to right,#af3c43 71px,transparent 71px) !important;
+    border-image-slice: 1 !important;
+  }
+}
+
+/* ************ BEGIN Throbber - Spinner ****************** */
+/* Full-screen overlay */
+.throbber-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spinning circle */
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #ff0000;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: relative;
+}
+
+/* Centered flag (non-spinning) */
+.flag-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Adjust size according to your logo */
+  height: 50px;
+  z-index: 1;
+  background-image: url("/gcweb.flag-of-canada-leaf.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ************ END Throbber - Spinner ****************** */
+
+.pagination > li > a{
+  width: unset !important;
+  height: unset !important;
+}

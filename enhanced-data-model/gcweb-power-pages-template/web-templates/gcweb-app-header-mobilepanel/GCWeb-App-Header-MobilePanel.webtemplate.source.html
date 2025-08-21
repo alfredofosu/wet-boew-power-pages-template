@@ -1,0 +1,195 @@
+<div class="app-bar-mb visible-xs-block hidden-print">
+    <div class="container">
+        <nav aria-labelledby="cdts-hiddenMenuAndSearch">
+            <h2 class="wb-inv" id="cdts-hiddenMenuAndSearch">Search</h2>
+            <ul class="app-list-main list-unstyled">
+                <li>
+                    <a href="#app-srch-mb" title="Search" aria-controls="app-srch-mb" class="btn overlay-lnk" role="button">
+                        <span class="glyphicon-search glyphicon" aria-hidden="true"></span>
+                        <span class="wb-inv">Search</span>
+                    </a>
+                </li>
+            </ul>
+            {% assign search_enabled = settings['Search/Enabled'] | boolean | default:true %}
+            {% if search_enabled %}
+            <section id="app-srch-mb" class="wb-overlay modal-content overlay-def wb-bar-t">
+                <div class="modal-header">
+                    <h3 class="modal-title">Search Canada.ca</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="https://www.canada.ca/en/sr/srb.html" method="get" name="cse-search-box" role="search"
+                        class="form-inline" aria-label="Search Criteria.">
+                        <div class="input-group">
+                            <label for="app-wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                            <input placeholder="Search Canada.ca" id="app-wb-srch-q" class="app-srch-q-mb form-control"
+                                name="q" type="search" value="" size="27" maxlength="150">
+                            <input type="hidden" name="cdn" value="canada">
+                            <span class="input-group-btn">
+                                <button type="submit" id="app-srch-sub-mb" class="btn btn-primary btn-small"
+                                    name="app-srch-sub-mb">
+                                    <span class="glyphicon-search glyphicon"></span>
+                                    <span class="wb-inv">Search</span>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <button title="Close: Search Canada.ca (escape key)" class="mfp-close overlay-close"
+                    type="button">×<span class="wb-inv"> Close: Search Canada.ca (escape key)</span></button>
+            </section>
+            {% endif %}
+        </nav>
+        <nav aria-labelledby="cdts-hiddenMenuAndSearch">
+            <h2 class="wb-inv" id="cdts-hiddenMenuAndSearch">Menu</h2>
+            <ul class="app-list-main list-unstyled">
+                <li class="wb-mb-links" id="wb-glb-mn">
+                    <a href="#mb-pnl" aria-controls="mb-pnl" class="btn overlay-lnk" role="button">Menu</a>
+                    <h2>Menu</h2>
+                </li>
+            </ul>
+            <div id="mb-pnl" class="wb-overlay modal-content overlay-def wb-panel-r">
+                <header class="modal-header">
+                    <div class="modal-title" id="mb-pnl-title">Menu</div>
+                </header>
+                <div class="modal-body">
+                    <section class="lng-ofr">
+                        <h3>Language selection</h3>
+                        <ul class="list-inline">
+                            <li>
+                                {% if website.selected_language.code == "en" %}
+                                <a lang="{{- fr_code -}}" href="/{{- fr_url_substitution -}}">
+                                    <span class="hidden-xs">{{ fr_name | escape }}</span>
+                                    <abbr title="{{ fr_name | escape }}"
+                                        class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">
+                                        {{- fr_code -}}
+                                    </abbr>
+                                </a>
+                                {% else %}
+                                <a lang="{{- en_code -}}" href="/{{- en_url_substitution -}}">
+                                    <span class="hidden-xs">{{ en_name | escape }}</span>
+                                    <abbr title="{{ en_name | escape }}"
+                                        class="visible-xs h3 mrgn-tp-sm mrgn-bttm-0 text-uppercase">
+                                        {{- en_code -}}
+                                    </abbr>
+                                </a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </section>
+                    {% assign primary_nav = weblinks["Default"] %}
+                    {% if primary_nav %}
+                    <nav role="navigation" typeof="SiteNavigationElement" id="sm-pnl" class="sm-pnl wb-menu">
+                        <h3 id="sm-pnl-heading">Main navigation menu</h3>
+                        <ul class="list-unstyled mb-menu" role="menu">
+                            {% for link in primary_nav.weblinks %}
+                            {% assign sublinks = nil %}
+                            {% if link.display_page_child_links and link.url %}
+                            {% assign sublinks = sitemap[link.url].children %}
+                            {% else %}
+                            {% assign sublinks = link.weblinks %}
+                            {% endif %}
+                            {% assign has_submenu = sublinks.size > 0 | boolean %}
+                            <li{% unless has_submenu %} class="no-sect" {% endunless %}>
+                                {% if has_submenu %}
+                                <details>
+                                    <summary class="mb-item" role="menuitem" aria-haspopup="true" 
+                                        {% if link.tooltip %} title="{{ link.tooltip | escape }}" {% endif %}>
+                                        {{ link.name | escape }}
+                                    </summary>
+                                    <ul class="list-unstyled mb-sm" role="menu">
+                                        {% for sublink in sublinks %}
+                                        <li>
+                                            <a role="menuitem" href="{{ sublink.link }}" 
+                                                {% if sublink.Open_In_New_Window %} target="_blank" {% endif %} 
+                                                {% if sublink.nofollow %} rel="nofollow" {% endif %} 
+                                                {% if sublink.tooltip %} title="{{ sublink.tooltip | escape }}" {% endif %}>
+                                                {{ sublink.name | default:sublink.title | escape }}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </details>
+                                {% else %}
+                                <a class="mb-item" role="menuitem" href="{{ link.url | escape }}" 
+                                    {% if link.Open_In_New_Window %} target="_blank" {% endif %} 
+                                    {% if link.nofollow %} rel="nofollow" {% endif %} 
+                                    {% if link.tooltip %} title="{{ link.tooltip | escape }}" {% endif %}>
+                                    {{ link.name | escape }}
+                                </a>
+                                {% endif %}
+                                </li>
+                                {% endfor %}
+                        </ul>
+                    </nav>
+                    {% endif %}
+                    <nav role="navigation" typeof="SiteNavigationElement" id="info-pnl" class="info-pnl wb-menu">
+                        <h3>undefined</h3>
+                        <ul class="list-unstyled mb-menu" role="menu">
+                            <li>
+                                <details>
+                                    <summary class="mb-item" role="menuitem">
+                                        Government of Canada Corporate
+                                    </summary>
+                                    <ul class="list-unstyled mb-sm" role="menu">
+                                        <li>
+                                            <a role="menuitem" href="https://www.canada.ca/en/transparency/terms.html">
+                                                Terms and conditions
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a role="menuitem"
+                                                href="https://www.canada.ca/en/transparency/privacy.html">
+                                                Privacy
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="no-sect">
+                                <a class="mb-item" role="menuitem"
+                                    href="https://www.canada.ca/en/transparency/terms.html">
+                                    Terms and conditions
+                                </a>
+                            </li>
+                            <li class="no-sect">
+                                <a class="mb-item" role="menuitem"
+                                    href="https://www.canada.ca/en/transparency/privacy.html">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li class="no-sect">
+                                <a class="mb-item" role="menuitem" href="#wb-cont">
+                                    Top of Page <span class="glyphicon glyphicon-chevron-up"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="modal-footer"><button title="overlay" class="btn btn-sm btn-primary pull-left overlay-close"
+                        type="button">Close<span class="wb-inv">overlay</span></button></div><button
+                    title="Close: Menu (escape key)" class="mfp-close overlay-close" type="button">×<span
+                        class="wb-inv"> Close: Menu (escape key)</span></button>
+            </div>
+        </nav>
+        <nav aria-labelledby="cdts-accountMenu">
+            <h2 class="wb-inv" id="cdts-accountMenu">Account menu</h2>
+            <ul class="app-list-account list-unstyled">
+                <li>
+                    <a href="#" id="cdts-signin-btn-mobile" class="btn"><span class="glyphicon glyphicon-off"aria-hidden="true"></span> 
+                        Sign in
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="cdts-signout-btn-mobile" class="btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                         Sign out
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 
+                        Account settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

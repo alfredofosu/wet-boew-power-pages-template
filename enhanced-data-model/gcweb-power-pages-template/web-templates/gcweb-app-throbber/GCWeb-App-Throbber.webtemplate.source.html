@@ -1,0 +1,13 @@
+<div class="throbber-overlay" id="mainThrobber">
+  <div class="spinner"></div>
+  <div class="flag-container"></div>
+</div>
+
+<script type="text/javascript">
+    (function ($) {
+        $(window).on('load', function () {
+            // Hide the throbber overlay once the page is fully loaded
+            $('#mainThrobber').fadeOut('slow');
+        });
+    })(window.jQuery_3_7_1);
+</script>

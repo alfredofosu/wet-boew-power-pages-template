@@ -1,0 +1,39 @@
+{%- assign cdtsVersion = settings['GCWeb/App/Version'] | default:"v5_0_4"-%}
+{%- assign cdtsTemplatesUrl = settings['GCWeb/App/BaseURL'] | default:"https://www.canada.ca/etc/designs/canada/cdts/gcweb/" -%}
+
+<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+    {% assign gcContextual = settings['GCWeb/App/Footer/ContextualEnabled'] | boolean | default:false %}
+    {% if gcContextual %}
+    <div class="gc-contextual">
+        <div class="container">
+            <nav aria-labelledby="cdts-appFooterLinks">
+                <h2 class="wb-inv" id="cdts-appFooterLinks">Related links</h2>
+                <h3>{{- snippets['GCWeb/App/Footer/Title'] -}}</h3>
+                <ul class="list-col-xs-1 list-col-sm-2 list-col-md-3">
+                    {{- snippets['GCWeb/App/Footer/Links'] -}}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+    <div class="gc-sub-footer">
+        <div class="container d-flex align-items-center">
+            <nav aria-labelledby="aboutWebApp">
+                <h3 class="wb-inv" id="aboutWebApp">Government of Canada Corporate</h3>
+                <ul>
+                    {{- snippets['GCWeb/App/Footer/Sublinks'] -}}
+                </ul>
+            </nav>
+            <div class="col-xs-6 visible-sm visible-xs tofpg">
+                <a id="tphp" href="#wb-cont">Top of Page<span class="glyphicon glyphicon-chevron-up"></span></a>
+            </div>
+            <div class="wtrmrk align-self-end">
+                <img src="{{- cdtsTemplatesUrl -}}{{- cdtsVersion -}}/wet-boew/assets/wmms-blk.svg"
+                    alt="Symbol of the Government of Canada">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{{- cdtsTemplatesUrl -}}{{- cdtsVersion -}}/wet-boew/js/jquery/2.2.4/jquery.min.js"></script>
+<script src="{{- cdtsTemplatesUrl -}}{{- cdtsVersion -}}/wet-boew/js/wet-boew.min.js"></script>

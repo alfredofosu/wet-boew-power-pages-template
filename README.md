@@ -1,105 +1,66 @@
-# About Power-Pages-CDTS-WET-Templates
+...existing code...
+# Web Experience Toolkit (WET) Power Pages Template
 
-This CDTS-WET template expedites development in Power Pages. It adheres to the implementation guidelines outlined in the Centrally Deployed Templates Solution (CDTS) documentation, utilizing the second method approach described here: [CDTS v5.0.0](https://cenw-wscoe.github.io/sgdc-cdts/docs/internet-nodocwrite-en.html). Notably, it enables developers to seamlessly switch between different templates, GCWeb Common, GCWeb Application, GCIntranet Common and GCIntranet Application through site settings. Since these templates are dynamically generated, your time in a low-code-no-code environment will be focused on other core Application Life-Cycle Management goals. The use of these templates streamlines development, ensuring accessibility, usability, interoperability, mobile-friendliness, and multilingual support.
+## Overview
+This template integrates the Web Experience Toolkit (WET) with Power Pages Enhanced Data Model, providing a streamlined foundation for Canadian government web applications.
 
-This template has been tested in the **Standard Data Model (SDM)**. A test in the Enhanced Data Model (EDM) will up later. This template has been designed as a plug-and-play template that gets your ready for development in a few minutes.
+## Version Information (as of August 2025)
+- **WET Framework**: v4.0.85  
+- **GC Web App Template**: v16.2.0  
+- **CDTS CSS Library**: v5.0.4  
+- **jQuery Dependency**: v2.2.4  
+- **Bootstrap**: v4
 
-# How-To:
-## Step 1: Install a Blank Template 
-Install a blank power pages template in your environment. This is if you haven't started a new project. 
+## Architecture Decisions
 
-## Step :Clone this repo
+### Static CDTS Implementation
+This template uses a static implementation of the Centrally Deployed Templates Solution (CDTS) rather than dynamic loading. This approach was chosen to:
+- Eliminate rendering delays
+- Prevent library conflicts with out-of-the-box Power Pages components
+- Ensure consistent performance
 
-## Step 2: Install Microsoft Power Platform CLI
-Install via .msi download, run the .msi file found here: [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI), and choose the Install option.
-Detailed instructions can be found here: [Install Power Platform CLI for Windows](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/powerapps-cli).
+### Bootstrap Version Compatibility
+The template currently uses Bootstrap v4 to maintain compatibility with WET libraries. Power Pages' Bootstrap v5 has been disabled and can be re-enabled once WET libraries are updated to support the newer version.
 
-## Step 3: Upload Power Pages content
+## Benefits
+- **Accelerated Development** — Focus on business requirements rather than framework integration.  
+- **Easy Maintenance** — Simplified library management and a clear upgrade path.  
+- **Conflict-Free** — Resolved compatibility issues between WET and Power Pages libraries.
 
-### 3.1. Open Power Shell
-Search Power Shell in the Window's search bar and open it.
+## Future Considerations
+The WET library stack can be upgraded as needed. Monitor WET framework updates for Bootstrap v5 compatibility to take advantage of Power Pages' enhanced styling capabilities.
 
-### 3.2. Auth
-There are several ways to authenticate with your Microsoft CRM 365 environment, either
 
-by using your environment ID ([here is how to locate your environment's ID](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/auth#environment-create))
+# Power Pages — Install a Site / Enhanced Data Model
+
+This document describes two approaches to set up WET-BOEW Power Pages Template: (A) upload an unmanaged solution via the UI, or (B) install the portal via CLI. 
+
+## Enable the Power Pages Enhanced Data Model
+Ensure the Enhanced Data Model is enabled in the Admin Center before installing.
+
+## A. Upload a managed solution (web UI)
+1. Download the "GCWeb Power Pages Template" unmanaged solution (.zip).  
+2. Sign in to the Power Platform maker portal: https://make.powerapps.com with an admin or environment-maker account.  
+3. Select the target environment (top-right).  
+4. Navigate to Solutions → Import.  
+5. Browse and select the unmanaged solution .zip → Next → Import.  
+6. Wait for the import to complete and verify there are no errors.  
+
+
+## B. CLI (PowerShell + PAC) - Recommended
+Prerequisites:
+- Install Power Platform CLI (pac) on Windows (e.g., via winget).  
+- Have environment import/solution permissions (System Admin).
+
+1. Open an elevated PowerShell session.
+2. Authenticate with pac:
 ```
-pac auth create --environment < Your environment ID >
+pac auth create --url "https://<org>.crm.dynamics.com" --name "myOrg"
+# Complete interactive sign-in when prompted
 ```
-or using your environment's URL (I prefer this as its easier to locate it in the URL).
-
-Replace < MYPOWERPAGE > with your site name!
+3. Locate the "gcweb-power-pages-template" and import
 ```
-pac auth create --url https://< MYPOWERPAGE >.crm3.dynamics.com
+# Example placeholders — verify flags with `pac paportal --help`
+pac pages import -p "C:\<path>\power-pages-template" -env "<env>" -mv 2
 ```
-
-### 3.3. Upload
-Copy the path to the local repo you cloned.
-
-For the Standard Data Model enter this pac command:
-
-Replace < path > with the path to the locally cloned repo e.g. "C:\path\to\local\repo\Power-Pages-CDTS-WET-Templates"
-```
-pac powerpages upload --path < path > -mv1
-```
-For the Enhanced Data Model enter this pac command: ([Enhanced data model | Microsoft Learn](https://learn.microsoft.com/en-us/power-pages/admin/enhanced-data-model)):
-```
-pac powerpages upload --path < path > -mv2
-```
-For more details, visit [Tutorial: Use Microsoft Power Platform CLI with Power Pages](https://learn.microsoft.com/en-us/power-pages/configure/power-platform-cli-tutorial#upload-the-changes-using-deployment-profile)
-
-## Step 4: Change Language Code for English and French
-By default language codes in Power Pages are stored together with country codes. For example, English: **en-Us** and for French: **fr-Fr**. This ensures the language links are populated
-If Enhanced data model, go to Power Pages Management > Websites > Supported Languages
-
-If Standard data model, go to Portal Management > Portal Languages
-- English. Change Language Code to 'en'
-- French. Change Language Code to 'fr'
-
-## Step 5: Point your Power Pages Website to WET template
-### Website Header and Footer
-Websites -> Your website -> Change 'Header Template' to 'WET4 - Header' and 'Footer Template' to 'WET4 - Footer'
-
-> ⚠️ **fail to set up the languages and their codes will result the header not showing.** You may have duplicate English and French records.
-
-### Site Settings, Content Snippets, Web Templates, Page Template
-
-In the Power Pages Management app, change the 'Website' for the components below from `TC-WET-CDTS - TC-WET-CDTS` to you Power Page.
-
-#### Site Settings
-- DateTime/DateFormat
-- WET5/IsGCWeb
-- WET5/Version
-- WET5/Mode
-
-#### Content Snippets (For both English and French)
-- WET5/AppName
-- WET5/Breadcrumbs
-- WET5/MenuLinks
-- Head/Bottom
-
-#### Web Templates
-- WET5/Header
-- WET5/Footer
-- WET4/FullPage
-
-#### Page Template
-- WET5/FullPage
-
-## Step 5: Update the page template for existing Web Pages
-
-Web Pages > Select page > Page Template
-
-# Q&A
-## I don't see the header and get error on console 'wet is not defined'.
-Check if 'English' and 'French' is setup and their code is 'en' and 'fr'.
-## Where to change WET version?
-Content Snippets -> Head/Bottom
-## Where to enable/disable IsApplication?
-Content Snippets -> Head/Bottom -> Set isApplication to false. Do not forget to change the French one as well.
-## How do I create my own menu?
-Content Snippets -> menuLinks. It's in json format.
-
-
-
-
+[Reference](https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/pages#example)
