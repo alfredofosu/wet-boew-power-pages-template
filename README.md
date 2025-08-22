@@ -222,16 +222,14 @@ pac pages import --help
    - **French record**: Change Language Code to `fr`
 6. Save all changes
 
-### Step 2: Configure Website Templates
+### Step 2: Configure Website
 **Link your Power Pages website to the GCWeb template**
 
-1. Navigate to **Power Pages** → **Websites**
-2. Select your target website
-3. Go to **Website Settings** or **Configuration**
-4. Update the following template settings:
-   - **Header Template**: Change to `GCWeb/App/Header`
-   - **Footer Template**: Change to `GCWeb/App/Footer`
-5. Save and publish changes
+1. Navigate to **Admin Center** → **Your Environment** → **Resources** → **Power Pages**
+2. Select your target power pages (must be an enhanced data model)
+3. Go to **Edit**
+4. In the Website Record swap the record to GCWeb Power Pages Template.
+5. Save
 
 ### Step 3: Test Your Installation
 1. **Preview your website**: Click the preview button in Power Pages
@@ -256,7 +254,11 @@ pac pages import --help
 ---
 
 ## Troubleshooting Guide
-TBD
+
+1. Why is my solution not importing?
+- Error: Solution "GCWeb Power Pages Template" failed to import: Import failed: The attachment is either not a valid type or is too large. It cannot be uploaded or downloaded.
+- Solution: Ensure you have removed JavaScript extension from the block attachments.
+- Path: Admin Center > Your Environment > Settings > Privacy + Security > Blocked Attachments (remove "js;" from the list)
 
 # Screenshots:
 

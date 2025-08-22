@@ -3,9 +3,13 @@
   {% if ThrobberEnabled %}
     {% include 'GCWeb/App/Throbber' %}
   {% endif %}
-  {%- include 'GCWeb/App/Page/Title' -%}
+  {% block title %}
+    {%- include 'GCWeb/App/Page/Title' -%}
+  {% endblock %}
   <div class="page-copy container">
-    {% editable page 'adx_copy' type: 'html', liquid: true %}
+    {% block main %}
+      {% editable page 'adx_copy' type: 'html', liquid: true %}
+    {% endblock %}
   </div>
   {%- assign PageDetailsEnabled = settings['GCWeb/App/Footer/PageDetailsEnabled'] | boolean | default:false -%}
   {%- if PageDetailsEnabled -%}

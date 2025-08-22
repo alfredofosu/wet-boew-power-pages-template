@@ -1,6 +1,7 @@
 adx_enablerating: false
 adx_enabletracking: false
 adx_excludefromsearch: false
+adx_feedbackpolicy: 756150000
 adx_hiddenfromsitemap: true
 adx_isroot: false
 adx_name: Search
@@ -10,5 +11,6 @@ adx_partialurl: search
 adx_publishingstateid: 32d9e576-4b88-48c4-a562-23eb977dab0b
 adx_rootwebpageid: daec83d2-69ab-4a80-a5ee-75fce9d715ba
 adx_sharedpageconfiguration: false
+adx_title: Search
 adx_webpageid: 3d538009-4ed1-4490-9d25-b00a2d043303
 adx_webpagelanguageid: 479653ed-6561-4160-a081-e917bb73b148

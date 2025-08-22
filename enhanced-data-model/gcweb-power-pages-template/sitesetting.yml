@@ -185,7 +185,7 @@
 - adx_name: Search/EnableGenerativeAI
   adx_sitesettingid: c796c980-d966-444a-80fc-35983fd89ee5
   adx_source: 0
-  adx_value: true
+  adx_value: false
 - adx_description: A true or false value. If set to true, the Last Successful Login field on the portal user’s contact will be updated with the date and time when they successfully signed in.
   adx_name: Authentication/LoginTrackingEnabled
   adx_sitesettingid: ca38ccc5-0793-4315-8a8b-fa757184a840

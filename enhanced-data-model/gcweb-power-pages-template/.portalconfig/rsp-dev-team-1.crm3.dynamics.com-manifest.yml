@@ -1,7 +1,7 @@
 adx_contentsnippet:
 - RecordId: 00791b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Search/Title
-  CheckSum: ee5d272483199a78562e8c1116d37d23fdf23c00a13d4bc3229525a02576bc4b
+  CheckSum: 0bfa904197ea0bddba7a3d5682014d8ac505e711d04a9f7b6f63195754f238ec
   IsDeleted: false
 - RecordId: 020e990e-0b7d-f011-b4cb-6045bd5cc7a2
   DisplayName: GCWeb/App/Name
@@ -25,7 +25,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: 1d791b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Header/Search/ToolTip
-  CheckSum: 3c5c60df779bb639b02be3675150057987af75ebdb1bf78c7ee66fafbfe07ed9
+  CheckSum: 408978e48596d41661f6a54a3993bf5d6553ef6318b08fae65e82c1f574145e9
   IsDeleted: false
 - RecordId: 21885683-71c9-b17a-427d-f5e31f70511b
   DisplayName: Site name
@@ -33,7 +33,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: 2b791b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Search/ResultsCount
-  CheckSum: 80b4c50e43848a069ebe057d752eec8e30cb79fe928e98f2e6eb5fd7a68e5ee7
+  CheckSum: 2c1e8eb1c0315dc8e27b8345e6c9c590b0321f1f0fdcba5f8bc5ff36b8f73373
   IsDeleted: false
 - RecordId: 3718e1cd-b27b-f011-b4cc-000d3ae86a1f
   DisplayName: Head/Bottom
@@ -49,7 +49,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: 3b791b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Search/NoResults
-  CheckSum: 403a3becdb8d4d3f919b9201c4c5413755449185b81ffeae40ee1ce8623dc3d0
+  CheckSum: 67fb26014d3bb9eeedc2e873f6f96ea4008cc0984b45762d7e01ba8c69a0d7b3
   IsDeleted: false
 - RecordId: 3c1c2f15-0a7d-f011-b4cb-6045bd5cc7a2
   DisplayName: GCWeb/App/Footer/Links
@@ -57,7 +57,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: 3d791b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Search/ResultsTitle
-  CheckSum: b8d3d71cda3d06eedf41723ff92513ab665430ef5daf356cd7dca314ddb44500
+  CheckSum: 1189dd324ce8bcfb7c3e3b3a0eaa6b4c7a461656df5a57cf0469e54e8b376e02
   IsDeleted: false
 - RecordId: 3f791b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Footer
@@ -86,6 +86,10 @@ adx_contentsnippet:
 - RecordId: 7539ff51-0a7e-f011-b4cb-000d3ae86fdc
   DisplayName: GCWeb/App/SignInText
   CheckSum: 6fb1c602a0e252bd82d0cda00e7135a27d2cffbace1e643a8f9376b18a42fc71
+  IsDeleted: false
+- RecordId: 8a85ee74-af7e-f011-b4cb-000d3ae86fdc
+  DisplayName: GCWeb/App/SearchText
+  CheckSum: d7493f905ba26608a15e6c02116474058779a97d48b8a827a8b8d67d5fb61850
   IsDeleted: false
 - RecordId: 8b4cb203-4158-4070-88ea-1e439524f2f7
   DisplayName: Header/Toggle Navigation
@@ -129,7 +133,7 @@ adx_contentsnippet:
   IsDeleted: false
 - RecordId: c5618f72-366f-4adf-9ced-9ee9e39b5af3
   DisplayName: Search/ResultsTitle
-  CheckSum: 0bdd603b501ac5ebefd31f5c3023095232f6d5de97eb077a25255d159a23bf24
+  CheckSum: 28a19949e748b0437cf6aca88848f4923ef1af81678b1ea1f957668ddaebe84c
   IsDeleted: false
 - RecordId: c7c523af-0a7d-f011-b4cb-6045bd5cc7a2
   DisplayName: GCWeb/App/Footer/Title
@@ -151,6 +155,10 @@ adx_contentsnippet:
   DisplayName: Header/Search/ToolTip
   CheckSum: c1195544b185dc9c452df9b576db41a096bce836d25d28931f429960f6052603
   IsDeleted: false
+- RecordId: e39cec9b-af7e-f011-b4cb-000d3ae86fdc
+  DisplayName: GCWeb/App/SearchText
+  CheckSum: 3a700157f525ca3e294708dc1051b6317414b2351259236e306d4d54b701b6c9
+  IsDeleted: false
 adx_pagetemplate:
 - RecordId: 04692db8-deab-4b4c-ae02-ffd7df21af25
   DisplayName: Access Denied
@@ -170,7 +178,7 @@ adx_pagetemplate:
   IsDeleted: false
 - RecordId: dc604aad-7e11-44ca-8a0b-0c6bcb496eff
   DisplayName: Search
-  CheckSum: 4ea021a1bd6a6e3c5364c9eb6eaf8b19287d65af9b8882cbdcaeabfdd338b60e
+  CheckSum: ffe850ac8b8373ca2154a84941708144bec7a8cfbd8a6fe6e2f952502f6d3ff2
   IsDeleted: false
 - RecordId: f46e821f-5d7d-f011-b4cb-000d3ae86fdc
   DisplayName: GCWeb/App/Page/Default
@@ -386,7 +394,7 @@ adx_sitesetting:
   IsDeleted: false
 - RecordId: c796c980-d966-444a-80fc-35983fd89ee5
   DisplayName: Search/EnableGenerativeAI
-  CheckSum: 4013dbecdb1683169c83b2c2a01176c7542f352c38aee78b4ca5b841746742d8
+  CheckSum: 92a0992b694ac4918738cc9cea8eaef11fa230867ef0a31e1b18ea4a4f855168
   IsDeleted: false
 - RecordId: ca38ccc5-0793-4315-8a8b-fa757184a840
   DisplayName: Authentication/LoginTrackingEnabled
@@ -558,7 +566,7 @@ adx_weblinkset:
 adx_webpage:
 - RecordId: 16bf1bb3-ad7b-f011-b4cc-000d3ae86a1f
   DisplayName: Overview
-  CheckSum: 0b8370c118ccf52601e0a28865ff8e5d98b5ff9706926dc706aec0a710a4476a
+  CheckSum: 8a47b2b2abd58224dab56596b28740af19ded3431df3c2152a9f344aaae42d3e
   IsDeleted: false
 - RecordId: 17cc022f-f350-4177-8e40-2496c1a874b8
   DisplayName: Page Not Found
@@ -566,7 +574,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 1a7fd1c7-502c-4063-a1af-9b0c4c2bbb03
   DisplayName: Home
-  CheckSum: 9edaf2a85b033e98f72cd0437e663f43fc4a0dc06381794f4b7b41e95552d403
+  CheckSum: b38da935f9edaf4d88d2f0671cc46c9b710b9ab1c196496772df7d2520a43cb7
   IsDeleted: false
 - RecordId: 1c52619f-39b2-415b-9f0d-56789f1802bf
   DisplayName: Home
@@ -574,11 +582,11 @@ adx_webpage:
   IsDeleted: false
 - RecordId: 3804238a-a87b-f011-b4cc-000d3af38d32
   DisplayName: Accueil
-  CheckSum: 4622c15e969da6f6b52007e573632a91046b6344eb508b9bd61532e1f6ded472
+  CheckSum: 354ef057d75827df1cc6413d01c2d08a026f427fb0b6b1934726897c9ca49134
   IsDeleted: false
 - RecordId: 3d538009-4ed1-4490-9d25-b00a2d043303
   DisplayName: Search
-  CheckSum: aabaacfc7f3e771e3c2a55f4d795fe20fdd0b8bba143570d0b79f4cb01f4775f
+  CheckSum: ba1000e333c4f1e6cff379f669a208c0b0a3942edd0bda929c67b79da99addbe
   IsDeleted: false
 - RecordId: 67741e4f-fbcf-4eee-9f58-540806397aba
   DisplayName: Profile
@@ -605,8 +613,8 @@ adx_webpage:
   CheckSum: a1cf4c323e57f89a37c5f18d7b4d23a865b7e97f34933ce62a1dc7f68d82eb26
   IsDeleted: false
 - RecordId: cf781b90-a87b-f011-b4cc-000d3af38d32
-  DisplayName: Search
-  CheckSum: 83f7f1055fce2df93bc7ba2afbb582d578c7ab8950dfbaec4438b4e321d16b8b
+  DisplayName: Rechercher
+  CheckSum: f3ce6590ce3d6c888dbd39c19a4cbfce499124d7e0ebf8c56b57ca31b0391b36
   IsDeleted: false
 - RecordId: d1781b90-a87b-f011-b4cc-000d3af38d32
   DisplayName: Page Not Found
@@ -618,7 +626,7 @@ adx_webpage:
   IsDeleted: false
 - RecordId: daec83d2-69ab-4a80-a5ee-75fce9d715ba
   DisplayName: Search
-  CheckSum: 96c82243291cfb62d40d3c70122b8b966aff0f89a8af197e6519c40eb88d455e
+  CheckSum: e9e958e575ed7388ad567e9c43bda3ba47496c6378d4a7dea5b84fcafa877cd9
   IsDeleted: false
 - RecordId: db0c8263-f94c-462c-80fd-d6daf608abde
   DisplayName: Page Not Found
@@ -686,7 +694,7 @@ adx_websitelanguage:
 adx_webtemplate:
 - RecordId: 0181360d-cf40-448a-8905-f66ccb533799
   DisplayName: Search Results
-  CheckSum: 9e4cfeacea382f1109bbc33d5374cfc570320e8ea5f90af254a563058fef0c37
+  CheckSum: 25c3ed083dc80b26cf8a8623d9cedcf2d34dbf4798ca1b4cf55ed739a645da32
   IsDeleted: false
 - RecordId: 18cbf707-ae7b-f011-b4cc-000d3ae86a1f
   DisplayName: Website/Head/Bottom/Template
@@ -726,7 +734,11 @@ adx_webtemplate:
   IsDeleted: false
 - RecordId: 98d7a66c-b27b-f011-b4cc-000d3ae86a1f
   DisplayName: GCWeb/App/Header
-  CheckSum: a5e737829da8bd846ec6f8a9a0e14513368b36e57cb487aaddecdf9c7b1bf60c
+  CheckSum: a95abc6413169badb30298dde85086d3880b04c48e789de86eab7624234c2901
+  IsDeleted: false
+- RecordId: a37d3176-d97e-f011-b4cb-000d3ae86fdc
+  DisplayName: GCWeb/App/Search/Results
+  CheckSum: 7b759397d256f91464acdcd692d2cb39653d6fc5d46965d9f82ff8a37f3ca7da
   IsDeleted: false
 - RecordId: a410a564-0e7e-f011-b4cb-000d3ae86fdc
   DisplayName: GCWeb/App/Throbber
@@ -734,7 +746,7 @@ adx_webtemplate:
   IsDeleted: false
 - RecordId: b37b39ae-6f2b-4c5b-8737-4f47725c70f1
   DisplayName: Page Header
-  CheckSum: e17b06e59c4b62ab83cd5049ccd07b67155d6e16f14d875225fb9ce82f129bf1
+  CheckSum: b3f423f53ebc69896133592880b3105e7733e50bb05a7a8be852a714de95fd66
   IsDeleted: false
 - RecordId: b455a42a-417d-f011-b4cb-000d3ae86fdc
   DisplayName: GCWeb/App/Header/MobilePanel
@@ -762,7 +774,7 @@ adx_webtemplate:
   IsDeleted: false
 - RecordId: dc30b07b-5a7d-f011-b4cb-000d3ae86fdc
   DisplayName: GCWeb/App/Page/Default
-  CheckSum: 8c6503084b6f62ba95795551991e613e2e117d64cce78fa5f8dff0dd80e9e632
+  CheckSum: b9c02fc4765909393a324a7d04c79d5d451e7776bcd2576a960adf0b87caf535
   IsDeleted: false
 - RecordId: ff5150e0-4b17-4954-b628-8db52c03e8f2
   DisplayName: Footer
