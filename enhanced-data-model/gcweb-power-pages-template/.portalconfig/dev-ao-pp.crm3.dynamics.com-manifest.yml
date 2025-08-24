@@ -781,35 +781,35 @@ adx_webtemplate:
   CheckSum: c27f178e226b5a2840e4c9b6c07d831436fae6662dbc13c0f34d3f489351d1db
   IsDeleted: false
 annotation:
-- RecordId: 25a50147-2f79-f011-b4cc-000d3ae86a1f
-  DisplayName: bootstrap.min.css
-  CheckSum: 4b69d9a506645b33b331da0962a01e2d55b6f9b7c3eb2e801a758068c95dff4e
-  IsDeleted: false
-- RecordId: 28871180-487e-f011-b4cc-000d3ae86a1f
-  DisplayName: gcweb.app.common.css
-  CheckSum: 2f92f22242921e1b10f51d1895b5ef9112d32a64099457977a135507f8e43d33
-  IsDeleted: false
-- RecordId: 6095da4a-2f79-f011-b4cb-000d3a849d7f
+- RecordId: 708f6d85-ee7e-f011-b4cc-000d3ae92dd3
   DisplayName: theme.css
-  CheckSum: b38737a59768aee0ca262a432224914db11c75126c4e451caa17d629ce1bb502
+  CheckSum: 04cc7898a9c2ba3a0bd0bbbbcca12e66659ddc8d9f52b13e887afaaf550f5d83
   IsDeleted: false
-- RecordId: 6f38aca3-357e-f011-b4cc-000d3ae86a1f
-  DisplayName: gcweb.app.common.js
-  CheckSum: 996dd265b0026ff16aea4645503d9e33e81a631819e449893c29954821cefce1
+- RecordId: 718f6d85-ee7e-f011-b4cc-000d3ae92dd3
+  DisplayName: bootstrap.min.css
+  CheckSum: e7605297c794c6c93bc687aca60817d22644a7791ca165f099106dc5b79499f8
   IsDeleted: false
-- RecordId: 9f3e8c4a-2f79-f011-b4cb-000d3ae86fdc
-  DisplayName: Cat-PC.png
-  CheckSum: 29c82d95c5c39cdc7606b5ad99e5cfcac94e2e2a175464d9dcb7a2542a11f76f
-  IsDeleted: false
-- RecordId: a23e8c4a-2f79-f011-b4cb-000d3ae86fdc
+- RecordId: 728f6d85-ee7e-f011-b4cc-000d3ae92dd3
   DisplayName: Logo-sm-64.png
-  CheckSum: 40487c07a386f60aea5ed15fc0460779b126fa335ced47a4ac6602fd2e19b2f5
+  CheckSum: ef432353f66eea1890dd284ddf689a1b4c2e75edf729abb996b185d398429343
   IsDeleted: false
-- RecordId: ae793a4b-2f79-f011-b4cb-0022483dc265
+- RecordId: 738f6d85-ee7e-f011-b4cc-000d3ae92dd3
+  DisplayName: gcweb.app.common.js
+  CheckSum: 8e9804984f12470375fe73fa7ef2587e1571e43a7ce29192adab5b585aa3e205
+  IsDeleted: false
+- RecordId: 748f6d85-ee7e-f011-b4cc-000d3ae92dd3
+  DisplayName: gcweb.app.common.css
+  CheckSum: f86acdceac5a6aa140e97400a6bb5b502e1f46e10eaeb011e36bcf94c1da6dd0
+  IsDeleted: false
+- RecordId: 758f6d85-ee7e-f011-b4cc-000d3ae92dd3
   DisplayName: portalbasictheme.css
-  CheckSum: 0cd55f24eb9687f0df2e25c28a68636ef12d6f68d20032339004647d0ea1cd02
+  CheckSum: 76aaee026241fda1269a20d914e2437db633bb6f0f682ce4eb8b81a545c7965b
   IsDeleted: false
-- RecordId: b58dfaa0-0f7e-f011-b4cb-000d3ae86fdc
+- RecordId: 768f6d85-ee7e-f011-b4cc-000d3ae92dd3
+  DisplayName: Cat-PC.png
+  CheckSum: f3f03d7f06438591def5c0118715fd79db09c73cbc3a394bcd64f692969b69d1
+  IsDeleted: false
+- RecordId: 778f6d85-ee7e-f011-b4cc-000d3ae92dd3
   DisplayName: gcweb.flag-of-canada-leaf.png
-  CheckSum: 05e9dacab853a1ce67ab6ee4647cc55057b2c439b44aad5d249542d72f0c767c
+  CheckSum: 929b838613520fd692656ee5ffee63fca6787f1ebd38e38a55e7b4c8b6e380cd
   IsDeleted: false
