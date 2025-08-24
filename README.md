@@ -8,7 +8,8 @@ This template integrates the Web Experience Toolkit (WET) with Power Pages Enhan
 - **GC Web App Template**: v16.2.0  
 - **CDTS CSS Library**: v5.0.4  
 - **jQuery Dependency**: v2.2.4  
-- **Bootstrap**: v4
+- **Bootstrap**: v4 (WET) / v5 (Power Pages)
+- **Power Pages**: v9.7.7.11 (Enhanced Data Model)
 
 ## Architecture Decisions
 
@@ -228,8 +229,10 @@ pac pages import --help
 1. Navigate to **Admin Center** → **Your Environment** → **Resources** → **Power Pages**
 2. Select your target power pages (must be an enhanced data model)
 3. Go to **Edit**
-4. In the Website Record swap the record to GCWeb Power Pages Template.
-5. Save
+4. In the Website Record swap the record to **GCWeb Power Pages Template**.
+   1. <img width="320" height="296" alt="image" src="https://github.com/user-attachments/assets/e8aa78d1-141d-424b-a4e1-47b44f166dd2" />
+5. Go to Power Page Management app, then open the website record to ensure the Primary Domain Name is pointing to your domain set for Power Pages.
+   1. <img width="1869" height="998" alt="image" src="https://github.com/user-attachments/assets/e2947692-b857-4bdf-b0e3-8198fb7cdfd0" />
 
 ### Step 3: Test Your Installation
 1. **Preview your website**: Click the preview button in Power Pages
